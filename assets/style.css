@@ -1,0 +1,281 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  header{
+      text-align: center;
+      border: 3px dashed;
+      /* background-image: url("../images/game.jpg"); */
+  }
+
+  .jumbotron{
+    text-align: center;
+    border: 3px;
+    background-image: url("../images/game.jpg");
+    /* margin-left: 350px;     */
+}
+
+.title{
+    /* color: aliceblue; */
+    font-family: 'Merienda', cursive;
+}
+
+
+  body{
+      background-image: url("../images/coffee5.jpg");
+      /* background-image: url("../images/coffee2.jpg"); */
+      /* background-image: url("https://www.google.ca/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj9yprrzMfcAhUvneAKHQ41Ax4QjRx6BAgBEAU&url=http%3A%2F%2Fwww.egrafis.com%2Fgambar%2Fsummer-flowers-spring-ppt-backgrounds-summer-flowers&psig=AOvVaw1xfn0CpgkYFps6wY4gi6ur&ust=1533066517581168") */
+      /* background-image: url("https://www.google.ca/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj8yfTsy8fcAhUM5IMKHTLZBY4QjRx6BAgBEAU&url=https%3A%2F%2Fwallpaper.wiki%2Ffree-wallpaper-hd-background.html%2Ffree-images-wallpaper-hd-background%2F&psig=AOvVaw3y05i7t90Nyb6UbQXPmGqR&ust=1533066436043831");
+      background-image: url("https://www.google.ca/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjgmKOBzMfcAhWl54MKHcz3AYcQjRx6BAgBEAU&url=https%3A%2F%2Fwallpaper.wiki%2Ffree-wallpaper-hd-background.html%2Ffree-images-wallpaper-hd-background%2F&psig=AOvVaw1xfn0CpgkYFps6wY4gi6ur&ust=1533066517581168");
+  */
+   -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+h3{
+    font-size: 30px;
+    /* color: #254117; */
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    /* color: aliceblue; */
+    }
+
+    p{
+        /* color: aliceblue; */
+    }
+
+    #show-buttons {
+        text-align:  center;	
+    }
+
+    #alignLeft {
+        float: left;
+    }
+    #alignRight {
+        float: right;
+    }
+
+
+    article {
+        clear: both;
+        margin-bottom: 3px;
+    }
+
+    article#MainContent {
+        float: left;
+        background: white;
+        width: 607px;
+        margin-top: 3px;
+        padding: 16px;
+    }
+    
+    
+    aside {
+        float: right;
+        width: 318px;
+    }
+    footer {
+        clear: both;
+    }
+
+
+/*micro-clearfix by Nicolas Gallagher http://nicolasgallagher.com/micro-clearfix-hack/*/
+
+/* For modern browsers */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+.cf:after {
+    clear:both;
+}
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+    zoom:1;
+}
+.cr {
+	clear: right;
+}
+.cl {
+	clear: left;
+}
+.cb {
+	clear: both;
+}
+.nrm {
+	margin-right: 0;
+}
+
+
+#questions div.panel {
+        display: block;
+        position: absolute;
+        width: 450px;
+        height: 450px;
+        background-color: #fff;
+    }
+    #questions p {
+        text-align: justify;
+    }
+    #questions div.innerQuestion {
+        position: relative;
+        height: 450px;
+    }
+    #questions div.iinnerQuestion p.show-buttons {
+        position: absolute;
+        bottom: 20px;
+        width: 450px;	
+    }
+    #show-buttons {
+        text-align:  center;
+    }
+
+    #transitions {
+        width: 450px;
+        height: 450px;
+        position: relative;
+        margin: 0 auto 40px;
+        -webkit-perspective: 1000px;
+        -moz-perspective: 1000px;
+        -ms-perspective: 1000px;
+        -o-perspective: 1000px;
+        perspective: 1000px;
+    }
+    #questions {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-transition: -webkit-transform 1s;
+        -moz-transition: -moz-transform 1s;
+        -ms-transition: -ms-transform 1s;
+        -o-transition: -o-transform 1s;
+        transition: transform 1s;
+    }
+
+    #questions .front {
+        -webkit-transform: translateZ( 225px );
+        -moz-transform: translateZ( 225px );
+        -ms-transform: translateZ( 225px );
+        -o-transform: translateZ( 225px );
+        transform: translateZ( 225px );
+    }
+    #questions .back {
+        display: none;
+        -webkit-transform: rotateX( -180deg ) translateZ( 225px );
+        -moz-transform: rotateX( -180deg ) translateZ( 225px );
+        -ms-transform: rotateX( -180deg ) translateZ( 225px );
+        -o-transform: rotateX( -180deg ) translateZ( 225px );
+        transform: rotateX( -180deg ) translateZ( 225px );
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+        
+    #questions .right {
+	-webkit-transform: rotateY( 90deg ) translateZ( 225px );
+	-moz-transform: rotateY( 90deg ) translateZ( 225px );
+	-ms-transform: rotateY( 90deg ) translateZ( 225px );
+	-o-transform: rotateY( 90deg ) translateZ( 225px );
+	transform: rotateY( 90deg ) translateZ( 225px );
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+#questions .left {
+	-webkit-transform: rotateY( -90deg ) translateZ( 225px );
+	-moz-transform: rotateY( -90deg ) translateZ( 225px );
+	-ms-transform: rotateY( -90deg ) translateZ( 225px );
+	-o-transform: rotateY( -90deg ) translateZ( 225px );
+	transform: rotateY( -90deg ) translateZ( 225px );
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+#questions .top {
+	-webkit-transform: rotateX( 90deg ) translateZ( 225px );
+	-moz-transform: rotateX( 90deg ) translateZ( 225px );
+	-ms-transform: rotateX( 90deg ) translateZ( 225px );
+	-o-transform: rotateX( 90deg ) translateZ( 225px );
+	transform: rotateX( 90deg ) translateZ( 225px );
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+#questions .bottom {
+	-webkit-transform: rotateX( -90deg ) translateZ( 225px );
+	-moz-transform: rotateX( -90deg ) translateZ( 225px );
+	-ms-transform: rotateX( -90deg ) translateZ( 225px );
+	-o-transform: rotateX( -90deg ) translateZ( 225px );
+	transform: rotateX( -90deg ) translateZ( 225px );
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+#questions.show-front {
+	-webkit-transform: translateZ( -225px );
+	-moz-transform: translateZ( -225px );
+	-ms-transform: translateZ( -225px );
+	-o-transform: translateZ( -225px );
+	transform: translateZ( -225px );
+}
+
+#questions.show-back {
+	-webkit-transform: translateZ( -225px ) rotateX( 180deg );
+	-moz-transform: translateZ( -225px ) rotateX( 180deg );
+	-ms-transform: translateZ( -225px ) rotateX( 180deg );
+	-o-transform: translateZ( -225px ) rotateX( 180deg );
+	transform: translateZ( -225px ) rotateX( 180deg );
+}
+#questions.show-right {
+	-webkit-transform: translateZ( -225px ) rotateY( -90deg );
+	-moz-transform: translateZ( -225px ) rotateY( -90deg );
+	-ms-transform: translateZ( -225px ) rotateY( -90deg );
+	-o-transform: translateZ( -225px ) rotateY( -90deg );
+	transform: translateZ( -225px ) rotateY( -90deg );
+}
+#questions.show-left {
+	-webkit-transform: translateZ( -225px ) rotateY( 90deg );
+	-moz-transform: translateZ( -225px ) rotateY( 90deg );
+	-ms-transform: translateZ( -225px ) rotateY( 90deg );
+	-o-transform: translateZ( -225px ) rotateY( 90deg );
+	transform: translateZ( -225px ) rotateY( 90deg );
+}
+#questions.show-top {
+	-webkit-transform: translateZ( -225px ) rotateX( -90deg );
+	-moz-transform: translateZ( -225px ) rotateX( -90deg );
+	-ms-transform: translateZ( -225px ) rotateX( -90deg );
+	-o-transform: translateZ( -225px ) rotateX( -90deg );
+	transform: translateZ( -225px ) rotateX( -90deg );
+}
+#questions.show-bottom {
+	-webkit-transform: translateZ( -225px ) rotateX( 90deg );
+	-moz-transform: translateZ( -225px ) rotateX( 90deg );
+	-ms-transform: translateZ( -225px ) rotateX( 90deg );
+	-o-transform: translateZ( -225px ) rotateX( 90deg );
+	transform: translateZ( -225px ) rotateX( 90deg );
+}
+
