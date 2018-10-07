@@ -127,7 +127,7 @@
         $("#addFriend").show();
         $("#newFriend").show();
         
-        $("#addFriend").on("click", function(event) {
+        $(".submit").on("click", function(event) {
             event.preventDefault();
             $.post("/app/friends", newFriend)
             .then(function(data) {
