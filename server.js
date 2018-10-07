@@ -10,11 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(htmlRoutes);
 app.use(apiRoutes);
-
-
-
-
-
+app.use(express.static('public'));
 
 
 app.listen(port);
