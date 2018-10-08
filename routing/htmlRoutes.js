@@ -12,4 +12,9 @@ router.get("/survey",function(request, response){
 })
 
 
+router.get("/result",function(request, response){
+    response.sendFile(path.join(__dirname, "../public/result.html"));
+})
+
+
 module.exports=router;

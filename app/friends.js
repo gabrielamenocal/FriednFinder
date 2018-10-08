@@ -14,7 +14,8 @@ friends = [
         5,
         4,
         1
-      ]
+      ],
+      "totalScore":"32"
     },
     {
       "name": "Jacob Deming",
@@ -30,8 +31,10 @@ friends = [
         1,
         3,
         2
-      ]
+      ],
+      "totalScore":"25"
     },
+
     {
       "name": "Jeremiah Scanlon",
       "photo": "https://avatars2.githubusercontent.com/u/8504998?v=3&s=460",
@@ -46,7 +49,9 @@ friends = [
         2,
         5,
         5
-      ]
+      ],
+      "totalScore":"37"
+
     },
     {
       "name": "Louis T. Delia",
@@ -62,7 +67,9 @@ friends = [
         2,
         2,
         3
-      ]
+      ],
+      "totalScore":"25"
+
     },
     {
       "name": "Lou Ritter",
@@ -78,7 +85,9 @@ friends = [
         3,
         1,
         4
-      ]
+      ],
+      "totalScore":"30"
+
     },
     {
       "name": "Jordan Biason",
@@ -110,7 +119,8 @@ friends = [
         5,
         3,
         3
-      ]
+      ],
+      "totalScore":"29"
     },
     {
       "name": "testa",
@@ -126,88 +136,9 @@ friends = [
         2,
         2,
         5
-      ]
-    },
-    {
-      "name": "Joe Smith",
-      "photo": "http://mlb.mlb.com/mlb/images/players/head_shot/501925.jpg",
-      "scores": [
-        4,
-        3,
-        3,
-        2,
-        2,
-        1,
-        3,
-        3,
-        3,
-        5
-      ]
-    },
-    {
-      "name": "Joe Smith",
-      "photo": "http://mlb.mlb.com/mlb/images/players/head_shot/501925.jpg",
-      "scores": [
-        4,
-        3,
-        3,
-        2,
-        2,
-        1,
-        3,
-        3,
-        3,
-        5
-      ]
-    },
-    {
-      "name": "Joe Smith",
-      "photo": "http://mlb.mlb.com/mlb/images/players/head_shot/501925.jpg",
-      "scores": [
-        4,
-        3,
-        3,
-        2,
-        2,
-        1,
-        3,
-        3,
-        3,
-        5
-      ]
-    },
-    {
-      "name": "Joe Smith",
-      "photo": "http://mlb.mlb.com/mlb/images/players/head_shot/501925.jpg",
-      "scores": [
-        4,
-        3,
-        3,
-        2,
-        2,
-        1,
-        3,
-        3,
-        3,
-        5
-      ]
-    },
-    {
-      "name": "Joe Smith",
-      "photo": "http://mlb.mlb.com/mlb/images/players/head_shot/501925.jpg",
-      "scores": [
-        4,
-        3,
-        3,
-        2,
-        2,
-        1,
-        3,
-        3,
-        3,
-        5
-      ]
-    }
+      ],
+      "totalScore":"35"
+    }   
   
   ]
 

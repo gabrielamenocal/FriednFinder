@@ -12,6 +12,8 @@
     $("#Score").hide();
     $("#addFriend").hide();
     $("#newFriend").hide();
+    $("#results").hide();
+
     
      
     $("select").on("change", function(){
@@ -126,6 +128,7 @@
         $("#Score").show(totalScore);
         $("#addFriend").show();
         $("#newFriend").show();
+
         
         $(".submit").on("click", function(event) {
             event.preventDefault();
@@ -133,6 +136,9 @@
             .then(function(data) {
                 console.log("survey.html", data);
                 alert("Adding Friend...");
+                $("#results").html('<h2> Friend added Sucessfully. Please view your results in thi link:  <a href="/result"> Results </a>  </h2> ');
+                $("#results").show();
+
             });
 
         });        
