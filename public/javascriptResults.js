@@ -17,10 +17,11 @@ $(document).ready(function (){
             for (var i = 0; i < friendsData.length; i++) {
     
               var yourResults = $("#yourResults");
-              var bestMatch = $("#bestMatch");              
-              // console.log(myObj);
+              var bestMatch = $("#bestMatch");             
     
               var listItem = $("<li class='list-group-item mt-4'>");
+              var listItemResult = $("<li class='list-group-item mt-4'>");
+
     
               listItem.append
               (
@@ -60,13 +61,27 @@ $(document).ready(function (){
                  {
                   returnedFriend = myFriend;
                   returnedFriendDifference = difference;
+                  console.log(difference);
                  };
 
               };
 
-              bestFriend = returnedFriend;
+              
+              console.log(returnedFriend);
 
-              bestMatch.append(bestFriend);            
+              listItemResult.append
+              (
+                $("<h2>").text("Friend #" + (i + 1)),
+                $("<hr>"),
+                $("<h3>").text("Name: " + returnedFriend.name),
+                $("<img width='150px'>").attr("src",  returnedFriend.photo),
+                $("<h3>").text("score: " + returnedFriend.scores),
+                $("<h3>").text("Toral score: " + returnedFriend.totalScore),
+              );
+
+              bestMatch.append(listItemResult);  
+
+
         
 
             // };
