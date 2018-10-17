@@ -1,6 +1,6 @@
-$(document).ready(function(){
+$(document).ready(function (){
 
-    results();
+  results();
     
 
     function results() {
@@ -17,6 +17,8 @@ $(document).ready(function(){
             for (var i = 0; i < friendsData.length; i++) {
     
               var yourResults = $("#yourResults");
+              var bestMatch = $("#bestMatch");              
+              // console.log(myObj);
     
               var listItem = $("<li class='list-group-item mt-4'>");
     
@@ -25,33 +27,53 @@ $(document).ready(function(){
                 $("<h2>").text("Friend #" + (i + 1)),
                 $("<hr>"),
                 $("<h3>").text("Name: " + friendsData[i].name),
-                $("<img>").text("Photo: " + friendsData[i].photo),
+                $("<img width='150px'>").attr("src",  friendsData[i].photo),
                 $("<h3>").text("score: " + friendsData[i].scores),
                 $("<h3>").text("Toral score: " + friendsData[i].totalScore),
               );
 
-              yourResults.append(listItem)
+              yourResults.append(listItem);
+
+              // bestFriend = computeBestMatch(friendsData);       
 
             };
     
 
+            // function computeBestMatch (friends) 
+            // {
+              var lastIndex = friendsData.length - 1;
+              var myObj = friendsData[lastIndex];
+              var difference = 0;
+              var returnedFriend = null;
+              var returnedFriendDifference;                 
+
+              for (var i = 0; i < friendsData.length -1; i++) 
+              { 
+                myFriend = friendsData[i];
+                difference = 0;
+                for (var j = 0; j < 12; j++) 
+                {
+                  difference = difference + Math.abs(myObj.scores[j] - myFriend.scores[j]);
+                }
+                
+                 if (returnedFriend  === null|| returnedFriendDifference > difference )
+                 {
+                  returnedFriend = myFriend;
+                  returnedFriendDifference = difference;
+                 };
+
+              };
+
+              bestFriend = returnedFriend;
+
+              bestMatch.append(bestFriend);            
         
-//             6. Determine the user's most compatible friend using the following as a guide:
 
-//    * Convert each user's results into a simple array of numbers (ex: `[5, 1, 4, 4, 5, 1, 2, 5, 4, 1]`).
-//    * With that done, compare the difference between current user's scores against those from other users, question by question. Add up the differences to calculate the `totalDifference`.
-//      * Example: 
-//        * User 1: `[5, 1, 4, 4, 5, 1, 2, 5, 4, 1]`
-//        * User 2: `[3, 2, 6, 4, 5, 1, 2, 5, 4, 1]`
-//        * Total Difference: **2 + 1 + 2 =** **_5_**
-//    * Remember to use the absolute value of the differences. Put another way: no negative solutions! Your app should calculate both `5-3` and `3-5` as `2`, and so on. 
-//    * The closest match will be the user with the least amount of difference.
+            // };
 
-           
-        
-        });
+          });
+    
+  }
 
-    }
-})
-
+});
 

@@ -8,11 +8,14 @@
     var value; 
     var scores =[];
     var totalScore=0;
+    var counter =0;
 
     $("#Score").hide();
     $("#addFriend").hide();
     $("#newFriend").hide();
     $("#results").hide();
+    $("#missingQuestions").hide();
+
 
     
      
@@ -23,53 +26,81 @@
         if (question === "q1"){
             value = $('option[name=q1]:checked').text();  
             score = value;
+            counter++;
         }
         else if(question === "q2"){
             value = $('option[name=q2]:checked').text(); 
             score = value;
+            counter++;
+
         }
         else if(question === "q3"){
             value = $('option[name=q3]:checked').text(); 
             score = value;
+            counter++;
+
         }
         else if(question === "q4"){
             value = $('option[name=q4]:checked').text(); 
             score = value;
+            counter++;
+
         }
         else if(question === "q5"){
             value = $('option[name=q5]:checked').text(); 
             score = value;
+            counter++;
+
         }
         else if(question === "q6"){
             value = $('option[name=q6]:checked').text();
             score = value;
+            counter++;
+
         }
         else if(question === "q7"){
             value = $('option[name=q7]:checked').text(); 
             score = (value);
+            counter++;
+
         }
         else if(question === "q8"){
             value = $('option[name=q8]:checked').text();
             score = value;
+            counter++;
+
         }
         else if(question === "q9"){
             value = $('option[name=q9]:checked').text();
             score = value;
+            counter++;
+
         }
         else if(question === "q10"){
             value = $('option[name=q10]:checked').text();
             score = value;
+            counter++;
+
         }
         else if(question === "q11"){
             value = $('option[name=q11]:checked').text();
             score = value;
+            counter++;
+
         }
         else if(question === "q12"){
             value = $('option[name=q12]:checked').text(); 
             score = value;
+            counter++;
+
         }
         else {
             console.log("error");
+        }
+
+        if (counter != 12){
+            $("missingQuestions").show();
+
         }
 
         console.log("value: " + value);
@@ -120,8 +151,10 @@
         var newFriend = {
             name: name,
             photo: photo,
-            scores:scores
+            scores:scores,
+            totalScore:totalScore
         }
+        
         console.log(newFriend);       
 
         $("#score").html(totalScore);
